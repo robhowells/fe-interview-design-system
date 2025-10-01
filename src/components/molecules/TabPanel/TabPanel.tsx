@@ -1,16 +1,17 @@
 export interface TabPanelProps {
-  index: number;
+  id: number;
   content: string;
   selected: number;
 }
 
-export default function TabPanel({ index, content, selected }: TabPanelProps) {
-  const isSelected = index === selected;
+export default function TabPanel({ id, content, selected }: TabPanelProps) {
+  const isSelected = id === selected;
   return (
     <div
-      id={`tab-panel-${index}`}
+      id={`tab-panel-${id}`}
+      data-testid={`tab-panel-${id}`}
       role="tabpanel"
-      aria-labelledby={`tab-${index}`}
+      aria-labelledby={`tab-${id}`}
       tabIndex={0}
       style={isSelected ? { display: "block" } : { display: "none" }}
     >

@@ -12,7 +12,7 @@ export default function TabPanelList({ data, selected }: TabPanelListProps) {
       {data.map((tab) => (
         <TabPanel
           key={`tab-panel${tab.id}`}
-          index={tab.id}
+          id={tab.id}
           content={tab.content}
           selected={selected}
         />

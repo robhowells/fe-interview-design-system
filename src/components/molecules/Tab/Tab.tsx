@@ -3,7 +3,7 @@ import Badge, { BadgeProps } from "../../atoms/Badge/Badge.tsx";
 import * as React from "react";
 
 export interface TabProps {
-  index: number;
+  id: number;
   text: string;
   badge?: BadgeProps;
   selected: number;
@@ -16,7 +16,7 @@ export interface TabProps {
 }
 
 export default function Tab({
-  index,
+  id,
   text,
   badge,
   selected,
@@ -24,18 +24,19 @@ export default function Tab({
   clickHandler,
   keyDownHandler,
 }: TabProps) {
-  const isSelected = index === selected;
+  const isSelected = id === selected;
   return (
     <li>
       <button
-        id={`tab-${index}`}
+        id={`tab-${id}`}
+        data-testid={`tab-${id}`}
         role="tab"
         type="button"
-        aria-controls={`tab-panel-${index}`}
+        aria-controls={`tab-panel-${id}`}
         aria-selected={isSelected}
         tabIndex={isSelected ? 0 : -1}
-        onClick={() => clickHandler(index)}
-        onKeyDown={(e) => keyDownHandler(e, index)}
+        onClick={() => clickHandler(id)}
+        onKeyDown={(e) => keyDownHandler(e, id)}
         className={`tab tab--${variant} ${isSelected ? "tab--selected" : ""}`}
       >
         {text}

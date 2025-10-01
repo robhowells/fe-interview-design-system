@@ -30,6 +30,7 @@ export default function TabList({
         role="tablist"
         aria-orientation="horizontal"
         aria-labelledby={titleId}
+        data-testid={`tab-list-${variant}`}
       >
         {data.map((tab) => {
           const tabProps = {
@@ -40,7 +41,7 @@ export default function TabList({
           return (
             <Tab
               key={`tab-${tab.id}`}
-              index={tab.id}
+              id={tab.id}
               text={tab.text}
               selected={selected}
               variant={variant}
