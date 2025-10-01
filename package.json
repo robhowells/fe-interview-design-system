@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@eslint/compat": "1.2.5",
+    "@eslint/js": "^9.36.0",
     "@storybook/addon-docs": "^9.1.5",
     "@storybook/addon-links": "0.0.0-pr-26827-sha-907fb3aa",
     "@storybook/react-vite": "^9.1.5",
@@ -35,9 +36,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-storybook": "^9.1.5",
+    "globals": "^16.4.0",
     "jsdom": "^26.1.0",
     "storybook": "^9.1.5",
     "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1",
     "vite": "^7.1.5",
     "vitest": "^3.2.4"
   }
