@@ -1,0 +1,118 @@
+/* Base tab styles. */
+.tab {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  background: transparent;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+}
+
+.tab::after {
+  content: "";
+  border: var(--spacing-4xs) solid var(--color-inverse);
+  position: absolute;
+  width: calc(100% + var(--spacing-2xs));
+  height: calc(100% + var(--spacing-2xs));
+  left: -0.375rem;
+  top: -0.375rem;
+  transform: scale(0.9);
+  opacity: 0;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.tab:focus::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.tab .badge {
+  margin-left: var(--spacing-2xs);
+}
+
+/* Pill variant styles. */
+.tab--pill {
+  border-radius: var(--rounded);
+  border: 0.063rem solid var(--color-outline);
+  padding: var(--spacing-xs);
+  transition:
+    var(--transition) background-color,
+    var(--transition) color;
+}
+
+.tab--pill::after {
+  border-radius: var(--rounded);
+}
+
+.tab--pill:hover {
+  background: var(--color-surfaceHover);
+  border-color: var(--color-outlineHover);
+}
+
+.tab--pill:active {
+  background: var(--color-surfaceActive);
+  border-color: var(--color-outline);
+}
+
+.tab--pill.tab--selected {
+  color: var(--color-onInverse);
+  background: var(--color-inverse);
+}
+
+.tab--pill.tab--selected:hover {
+  background: var(--color-inverseHover);
+}
+
+.tab--pill.tab--selected:active {
+  background: var(--color-inverseActive);
+}
+
+/* Underline variant styles. */
+.tab--underline {
+  border: 0;
+  padding: 0.563rem 0;
+}
+
+.tab--underline::after {
+  border-radius: var(--rounded-xs);
+}
+
+.tab--underline::before {
+  content: "";
+  height: 0.188rem;
+  width: 100%;
+  border-radius: var(--rounded);
+  background: var(--color-outlineHover);
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0.7);
+  opacity: 0;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.tab--underline.tab--selected::before,
+.tab--underline:hover::before,
+.tab--underline:focus::before,
+.tab--underline:active::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.tab--underline.tab--selected::before {
+  background: var(--color-inverse);
+}
+
+/* Responsive overrides. */
+@media (min-width: 48.063rem) {
+  .tab--pill {
+    padding: var(--spacing-s);
+  }
+
+  .tab--underline {
+    padding: 1.06rem 0;
+  }
+}

@@ -1,14 +1,46 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@14..32,400;700&display=swap");
+
 :root {
-  --background: #eee;
-  --content: #222;
+  --spacing-4xs: 0.125rem;
+  --spacing-3xs: 0.25rem;
+  --spacing-2xs: 0.5rem;
+  --spacing-xs: 0.75rem;
+  --spacing-s: 1rem;
+  --spacing-m: 1.25rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --color-content: #222;
+  --color-outline: #d3d3dc;
+  --color-outlineHover: #c4c5cf;
+  --color-inverse: #1b2134;
+  --color-inverseHover: #343a4e;
+  --color-inverseActive: #585d71;
+  --color-surfaceHigh: #f1f1f7;
+  --color--surfacePositive: #b1ffc7;
+  --color--surfaceNegative: #ffbfb1;
+  --color-surfaceHover: #f6f6fa;
+  --color-surfaceActive: var(--color-surfaceHigh);
+  --color-onInverse: #fff;
+  --color-onNeutral: var(--color-inverse);
+  --font-size-s: 0.75rem;
+  --font-size-m: 0.875rem;
+  --font-weight-bold: 700;
+  --rounded-xs: 0.5rem;
+  --rounded: 6.25rem;
+  --transition: 0.2s;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--content);
-  display: grid;
-  font-size: 2rem;
-  margin: 0;
-  min-height: 100vh;
-  place-content: center;
+  color: var(--color-content);
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  padding: 0 var(--spacing-s);
 }

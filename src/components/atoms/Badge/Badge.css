@@ -1,0 +1,26 @@
+.badge {
+  padding: var(--spacing-4xs) var(--spacing-3xs);
+  border-radius: var(--spacing-2xs);
+  color: var(--color-onNeutral);
+  font-size: var(--font-size-s);
+}
+
+.badge--neutral {
+  background: var(--color-surfaceHigh);
+}
+
+.badge--positive {
+  background: var(--color--surfacePositive);
+}
+
+.badge--negative {
+  background: var(--color--surfaceNegative);
+}
+
+/* Responsive overrides. */
+@media (min-width: 48.063rem) {
+  .badge {
+    padding: var(--spacing-3xs) var(--spacing-2xs);
+    border-radius: var(--spacing-xs);
+  }
+}
