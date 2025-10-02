@@ -6,7 +6,7 @@ const variants = ["neutral", "positive", "negative"];
 
 describe.each(variants)("Badge with the %s variant", (expected) => {
   it("should display the correct variant", () => {
-    render(<Badge variant={expected} text={"Badge"}/>);
+    render(<Badge variant={expected} text={"Badge"} />);
     const badgeVariant = screen.getByTestId(`badge-${expected}`);
     expect(badgeVariant).toBeInTheDocument();
   });

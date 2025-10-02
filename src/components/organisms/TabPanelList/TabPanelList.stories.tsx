@@ -13,6 +13,6 @@ type Story = StoryObj<typeof TabPanelList>;
 export const Default: Story = {
   args: {
     ...TabStory.args,
-    selected: 1
+    selected: 1,
   },
 };

@@ -39,7 +39,7 @@ export default function Tab({
         className={`tab tab--${variant} ${isSelected ? "tab--selected" : ""}`}
       >
         {text}
-        {badge && <Badge text={badge.text} variant={badge.variant}/>}
+        {badge && <Badge text={badge.text} variant={badge.variant} />}
       </button>
     </li>
   );

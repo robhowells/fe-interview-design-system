@@ -18,7 +18,7 @@ const tabsData = [
 describe("Tabs", () => {
   describe("with a selected tab item", () => {
     it("should show its corresponding tab panel", () => {
-      render(<Tabs data={tabsData} variant={"pill"}/>);
+      render(<Tabs data={tabsData} variant={"pill"} />);
       const tab = screen.getByText(tabsData[0].text);
       const tabPanel = screen.getByText(tabsData[0].content);
       expect(tab).toHaveClass("tab--selected");
@@ -27,7 +27,7 @@ describe("Tabs", () => {
   });
 
   it("should switch to a new tab when clicked", () => {
-    render(<Tabs data={tabsData} variant={"pill"}/>);
+    render(<Tabs data={tabsData} variant={"pill"} />);
     const firstTab = screen.getByText(tabsData[0].text);
     const secondTab = screen.getByText(tabsData[1].text);
     const firstTabPanel = screen.getByText(tabsData[0].content);

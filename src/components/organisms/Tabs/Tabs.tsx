@@ -72,7 +72,7 @@ export default function Tabs({ data, variant }: TabProps) {
         clickHandler={handleClick}
         keyDownHandler={handleKeyDown}
       />
-      <TabPanelList data={data} selected={selected}/>
+      <TabPanelList data={data} selected={selected} />
     </div>
   );
 }
