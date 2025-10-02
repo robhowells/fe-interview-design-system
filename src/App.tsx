@@ -43,8 +43,8 @@ export default function App() {
   return (
     <div className="container">
       <h1>Tabs demo</h1>
-      <Tabs data={tabData} variant="pill" />
-      <Tabs data={tabData} variant="underline" />
+      <Tabs data={tabData} variant="pill"/>
+      <Tabs data={tabData} variant="underline"/>
     </div>
   );
 }
