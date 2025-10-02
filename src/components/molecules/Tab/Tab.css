@@ -107,7 +107,6 @@
   background: var(--color-inverse);
 }
 
-/* Responsive overrides. */
 @media (min-width: 48.063rem) {
   .tab--pill {
     padding: var(--spacing-s);
