@@ -6,5 +6,12 @@ export interface BadgeProps {
 }
 
 export default function Badge({ text, variant }: BadgeProps) {
-  return <span className={`badge badge--${variant}`} data-testid={`badge-${variant}`}>{text}</span>;
+  return (
+    <span
+      className={`badge badge--${variant}`}
+      data-testid={`badge-${variant}`}
+    >
+      {text}
+    </span>
+  );
 }

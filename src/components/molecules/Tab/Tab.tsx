@@ -26,7 +26,7 @@ export default function Tab({
 }: TabProps) {
   const isSelected = id === selected;
   return (
-    <li>
+    <li className={"tab-wrapper"}>
       <button
         id={`tab-${id}`}
         role="tab"

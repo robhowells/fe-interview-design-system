@@ -5,14 +5,24 @@ import Tab from "./Tab.tsx";
 const badgeData = {
   text: "Info",
   variant: "neutral",
-}
+};
 
 describe("Tab", () => {
   describe("with a badge", () => {
     it("should display a badge", () => {
-      render(<Tab badge={badgeData}/>);
+      render(
+        <Tab
+          badge={badgeData}
+          id={1}
+          text={"Tab"}
+          selected={1}
+          variant={"pill"}
+          clickHandler={() => {}}
+          keyDownHandler={() => {}}
+        />,
+      );
       const badge = screen.getByTestId(`badge-${badgeData.variant}`);
       expect(badge).toBeInTheDocument();
     });
-  })
+  });
 });

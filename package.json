@@ -10,7 +10,8 @@
     "prettier": "pnpm exec prettier src/ --write",
     "storybook": "storybook dev -p 6006",
     "test": "vitest run",
-    "tsc": "tsc -b"
+    "tsc": "tsc -b",
+    "build": "npm run lint && npm run prettier && npm run test && npm run tsc"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
@@ -20,8 +21,9 @@
   "devDependencies": {
     "@eslint/compat": "1.2.5",
     "@eslint/js": "^9.36.0",
+    "@storybook/addon-a11y": "^9.1.10",
     "@storybook/addon-docs": "^9.1.5",
-    "@storybook/addon-links": "0.0.0-pr-26827-sha-907fb3aa",
+    "@storybook/addon-links": "^9.1.10",
     "@storybook/react-vite": "^9.1.5",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",

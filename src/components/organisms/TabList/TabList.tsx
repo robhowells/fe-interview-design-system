@@ -35,9 +35,9 @@ export default function TabList({
         {data.map((tab) => {
           const tabProps = {
             ...(tab.badge && {
-              badge: tab.badge
-            })
-          }
+              badge: tab.badge,
+            }),
+          };
           return (
             <Tab
               key={`tab-${tab.id}`}
@@ -49,7 +49,7 @@ export default function TabList({
               keyDownHandler={keyDownHandler}
               {...tabProps}
             />
-          )
+          );
         })}
       </ul>
     </>

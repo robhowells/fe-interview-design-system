@@ -1,4 +1,7 @@
-/* Base tab styles. */
+.tab-wrapper {
+  list-style: none;
+}
+
 .tab {
   cursor: pointer;
   position: relative;
@@ -32,7 +35,6 @@
   margin-left: var(--spacing-2xs);
 }
 
-/* Pill variant styles. */
 .tab--pill {
   border-radius: var(--rounded);
   border: 0.063rem solid var(--color-outline);
@@ -69,7 +71,6 @@
   background: var(--color-inverseActive);
 }
 
-/* Underline variant styles. */
 .tab--underline {
   border: 0;
   padding: 0.563rem 0;
