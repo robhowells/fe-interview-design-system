@@ -29,7 +29,6 @@ export default function Tab({
     <li>
       <button
         id={`tab-${id}`}
-        data-testid={`tab-${id}`}
         role="tab"
         type="button"
         aria-controls={`tab-panel-${id}`}

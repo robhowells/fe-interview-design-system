@@ -9,7 +9,6 @@ export default function TabPanel({ id, content, selected }: TabPanelProps) {
   return (
     <div
       id={`tab-panel-${id}`}
-      data-testid={`tab-panel-${id}`}
       role="tabpanel"
       aria-labelledby={`tab-${id}`}
       tabIndex={0}
